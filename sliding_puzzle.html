@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="assets/scripts/sliding_puzzle.js"></script>
+		<title>Dodge!</title>
+	</head>
+	<body>
+		<div class="navbar">
+			<ul>
+				<li><a href="index.html" class="home">Home</a></li>
+				<li><a href="snake.html" class="navbar-item">Snake</a></li>
+				<li><a href="pong.html" class="navbar-item">Pong</a></li>
+				<li><a href="memory_puzzle.html" class="navbar-item">Memory Tiles</a></li>
+			</ul>
+		</div>
+		<div id="dodge_options">
+			<p>Winning score</p>
+			<input id="dodge_score" type="text" placeholder="default: 5">
+			<p>Player lives</p>
+			<input id="dodge_player_lives" type="text" placeholder="default: 3">
+			<p>Player speed</p>
+			<input id="dodge_player_speed" type="text" placeholder="default: 4 (max: 30)">
+			<p>Obstacle acceleration</p>
+			<input id="dodge_obstacle_accel" type="text" placeholder="default: 0.5 (max: 20)">
+			<p>Number of obstacles</p>
+			<input id="dodge_obstacle_num" type="text" placeholder="default: 20 (max: 50)">
+			<p>Obstacles to stack</p>
+			<input id="dodge_obstacle_stack" type="text" placeholder="default: 0 (max: 20)">
+			<br><br>
+			<!--The update, default, and clear buttons will NOT disrupt game continuity-->
+			<button id="dodge_update_btn" type="button">Update</button>
+			<button id="dodge_default_btn" type="button">Default</button>
+			<button id="dodge_clear_btn" type="button">Clear Fields</button>
+		</div>
+		<div id="dodge_buttons">
+			<button id="dodge_continuity_btn" type="button">Start/Pause</button>
+			<button id="dodge_reset_btn" type="button">Reset</button>
+			<button id="dodge_easy_btn" type="button">Easy difficulty</button>
+			<button id="dodge_med_btn" type="button">Medium difficulty</button>
+			<button id="dodge_hard_btn" type="button">Hard difficulty</button>
+		</div>
+		<div id="dodge_scores">
+			<p>Winning score:</p>
+			<p id="dodge_win_score"></p>
+			<p>Current score:</p>
+			<p id="dodge_current_score"></p>
+			<p>Lives:</p>
+			<p id="dodge_current_lives"></p>
+			<p>Highest score:</p>
+			<p id="dodge_highest_score"></p>
+		</div>
+		<div id="dodge_game_text"></div>
+		<canvas id="dodge_game_canvas" width="640" height="480"></canvas>
+	</body>
+</html>

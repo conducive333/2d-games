@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="assets/scripts/pong.js"></script>
+		<title>Pong!</title>
+	</head>
+	<body>
+		<div class="navbar">
+			<ul>
+				<li><a href="index.html" class="home">Home</a></li>
+				<li><a href="snake.html" class="navbar-item">Snake</a></li>
+				<li><a href="sliding_puzzle.html" class="navbar-item">Dodge</a></li>
+				<li><a href="memory_puzzle.html" class="navbar-item">Memory Tiles</a></li>
+			</ul>
+		</div>
+		<div id="pong_options">
+			<p>Winning score</p>
+			<input id="pong_score" type="text" placeholder="default: 3">
+			<p>Points to increase score</p>
+			<input id="pong_points" type="text" placeholder="default: 5">
+			<p>Ball speed</p>
+			<input id="pong_speed" type="text" placeholder="default: 20 (max: 50)">
+			<p>AI speed</p>
+			<input id="pong_AI_speed" type="text" placeholder="default: 10 (max: 50)">
+			<p>Ball color (hex code)</p>
+			<input id="pong_ball_color" type="text" placeholder="default: #42bcf4">
+			<p>Paddle color (hex code)</p>
+			<input id="pong_paddle_colors" type="text" placeholder="default: #42bcf4">
+			<br><br>
+			<!--The update, default, and clear buttons will NOT disrupt game continuity-->
+			<button id="pong_update_btn" type="button">Update</button>
+			<button id="pong_default_btn" type="button">Default</button>
+			<button id="pong_clear_btn" type="button">Clear Fields</button>
+		</div>
+		<div id="pong_buttons">
+			<button id="pong_continuity_btn" type="button">Start/Pause</button>
+			<button id="pong_reset_btn" type="button">Reset</button>
+			<button id="pong_easy_btn" type="button">Easy difficulty</button>
+			<button id="pong_med_btn" type="button">Medium difficulty</button>
+			<button id="pong_hard_btn" type="button">Hard difficulty</button>
+		</div>
+		<div id="pong_scores">
+			<p>Player's Total Wins:</p>
+			<p id="pong_player_wins">0</p>
+			<p>AI's Total Wins:</p>
+			<p id="pong_ai_wins">0</p>
+		</div>
+		<div id="pong_game_text"></div>
+		<canvas id="pong_game_canvas" width="640" height="480"></canvas>
+	</body>
+</html>

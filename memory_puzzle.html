@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="assets/scripts/memory_puzzle.js"></script>
+		<title>Memory Tiles!</title>
+	</head>
+	<body>
+		<div class="navbar">
+			<ul>
+				<li><a href="index.html" class="home">Home</a></li>
+				<li><a href="snake.html" class="navbar-item">Snake</a></li>
+				<li><a href="pong.html" class="navbar-item">Pong</a></li>
+				<li><a href="sliding_puzzle.html" class="navbar-item">Dodge</a></li>
+			</ul>
+		</div>
+		<div id="memory_options">
+			<p>Winning score</p>
+			<input id="memory_score" type="text" placeholder="default: 6">
+			<p>Tries</p>
+			<input id="memory_tries" type="text" placeholder="default: 3">
+			<p>Top-left box color</p>
+			<input id="memory_s0_color" type="text" placeholder="default: #f44242">
+			<p>Top-right box color</p>
+			<input id="memory_s1_color" type="text" placeholder="default: #42bcf4">
+			<p>Bottom-left box color</p>
+			<input id="memory_s2_color" type="text" placeholder="default: #50f441">
+			<p>Bottom-right box color</p>
+			<input id="memory_s3_color" type="text" placeholder="default: #f4f141">
+			<br><br>
+			<!--The update, default, and clear buttons will NOT disrupt game continuity-->
+			<button id="memory_update_btn" type="button">Update</button>
+			<button id="memory_default_btn" type="button">Default</button>
+			<button id="memory_clear_btn" type="button">Clear Fields</button>
+		</div>
+		<button id="memory_start_button" type="button">Start!</button>
+		<div id="squares_container">
+			<div class="square" id="s0"></div>
+			<div class="square" id="s1"></div>
+			<div class="square" id="s2"></div>
+			<div class="square" id="s3"></div>
+		</div>
+		<div id="memory_scores">
+			<p>Winning length:</p>
+			<p id="memory_win_len"></p>
+			<p>Current sequence length:</p>
+			<p id="memory_current_len"></p>
+			<p>Tries left:</p>
+			<p id="memory_tries_left"></p>
+			<p>Longest streak:</p>
+			<p id="memory_highest_score"></p>
+		</div>
+		<div id="memory_game_text"></div>
+	</body>
+</html>

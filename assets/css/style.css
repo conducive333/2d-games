@@ -1,0 +1,174 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 90vh;
+	font-family: "Lucida Console", Monaco, monospace;
+	background: rgb(174,229,238);
+	background: radial-gradient(circle, rgba(174,229,238,1) 0%, rgba(66,188,244,1) 100%);
+	/*background: linear-gradient(to right, #b2fefa, #0ed2f7);*/
+}
+/*Navbar styling*/
+.navbar {
+	position: fixed;
+	width: 100%;
+	background: #282828;
+	overflow: auto;
+	z-index: 1;
+}
+.navbar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 60px;
+}
+.navbar li {
+	float:left;
+}
+.navbar ul li a {
+	background: #282828;
+	text-decoration: none;
+	width: 250px;
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 0.5px;
+}
+.navbar li a:hover {
+	color: #42bcf4;
+	font-size: 19px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+/*Home view styling*/
+section {
+	width: 100%;
+	height: 85vh;
+	box-sizing: border-box;
+}
+.divider {
+	height: 35px;
+	width: 100%;
+}
+section#sec0, #sec1, #sec2, #sec3, #sec4 {
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+.video_container {
+	height: 91%;
+	width: 65%;
+	position: relative;
+	top: 50%; 
+	left: 50%; 
+	transform: translate(-50%, -50%); 
+}
+section.text {
+	padding: 25px 100px;
+	background: #282828;
+	height: auto;
+	color: #fff;
+}
+section.text h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 48px;
+}
+section.text h1 a {
+	text-decoration: none;
+	color: #fff;
+}
+section.text h1 a:hover {
+	color: #42bcf4;
+	font-size: 50px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+section.text p {
+	font-size: 18px;
+	color: #fff;
+}
+/*Miscellaneous game styling*/
+#snake_game_canvas, #pong_game_canvas, #dodge_game_canvas {
+	position: absolute;
+	top: 55%; 
+	left: 50%; 
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+#snake_buttons, #pong_buttons, #dodge_buttons, #memory_start_button {
+	position: absolute;
+	top: 90%; 
+	left: 50%; 
+	transform: translate(-50%, -50%);
+}
+#snake_game_text, #pong_game_text, #dodge_game_text, #memory_game_text {
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 50px;
+	color: #fff;
+	text-align: center;
+}
+#snake_options, #pong_options, #dodge_options, #memory_options {
+	float: left;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-250%, -50%);
+	width: 250px;
+	height: 480px;
+	text-align: center;
+	color: white;
+	background-color: #282828;
+	z-index: 3;
+}
+#snake_scores, #pong_scores, #dodge_scores, #memory_scores {
+	float: right;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(150%, -50%);
+	width: 250px;
+	height: 480px;
+	text-align: center;
+	color: #fff;
+	background-color: #282828;
+	z-index: 3;
+}
+/*Snake game styling*/
+#snake_start_msg {
+	position: absolute;
+	top: 95%; 
+	left: 50%; 
+	transform: translate(-50%, -50%);
+}
+/*Memory game styling*/
+#squares_container {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 480px;
+	width: 480px;
+	background-color: #282828;
+}
+#squares_container .square {
+	width: 40%;
+	height: 40%;
+	margin: 32px 0px 0px 32px;
+	float: left;
+}
+#squares_container #s0 {
+	background-color: #f44242;
+}
+#squares_container #s1 {
+	background-color: #42bcf4;
+}
+#squares_container #s2 {
+	background-color: #50f441;
+}
+#squares_container #s3 {
+	background-color: #f4f141;
+}

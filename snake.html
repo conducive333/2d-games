@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="assets/scripts/snake.js"></script>
+		<title>Snake!</title>
+	</head>
+	<body>
+		<div class="navbar">
+			<ul>
+				<li><a href="index.html" class="home">Home</a></li>
+				<li><a href="pong.html" class="navbar-item">Pong</a></li>
+				<li><a href="sliding_puzzle.html" class="navbar-item">Dodge</a></li>
+				<li><a href="memory_puzzle.html" class="navbar-item">Memory Tiles</a></li>
+			</ul>
+		</div>
+		<div id="snake_options">
+			<p>Winning length</p>
+			<input class="snake_win_len" type="text" placeholder="default: 20">
+			<p>Number of lives</p>
+			<input id="snake_user_lives" type="text" placeholder="default: 3">
+			<p>Starting length</p>
+			<input id="snake_len" type="text" placeholder="default: 5">
+			<p>Snake color (hex code)</p>
+			<input id="snake_color" type="text" placeholder="default: #42bcf4">
+			<p>Apple color (hex code)</p>
+			<input id="apple_color" type="text" placeholder="default: #fff">
+			<p>Infinite lives?</p>
+			<input type="radio" name="tail_repeat" value="true"> Yes
+  			<input type="radio" name="tail_repeat" value="false"> No
+			<br><br>
+			<!--The update, default, and clear buttons will NOT disrupt game continuity-->
+			<button id="snake_update_btn" type="button">Update</button>
+			<button id="snake_default_btn" type="button">Default</button>
+			<button id="snake_clear_btn" type="button">Clear Fields</button>
+		</div>
+		<div id="snake_buttons">
+			<button id="snake_continuity_btn" type="button">Pause/Resume</button>
+			<button id="snake_reset_btn" type="button">Reset</button>
+		</div>
+		<div id="snake_scores">
+			<p>Winning length:</p>
+			<p class="snake_win_len"></p>
+			<p>Current length:</p>
+			<p id="snake_current_len"></p>
+			<p>Lives:</p>
+			<p id="snake_lives"></p>
+			<p>Longest recorded length:</p>
+			<p id="snake_longest_len"></p>
+		</div>
+		<div id="snake_game_text"></div>
+		<!--The game renders well when the width equals the height (the canvas is a square) and both values are perfect squares-->
+		<canvas id="snake_game_canvas" width="484" height="484"></canvas>
+		<div id="snake_start_msg" style="color: #fff;">Press any arrow key to start!</div>
+	</body>
+</html>

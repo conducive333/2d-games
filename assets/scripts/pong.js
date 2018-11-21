@@ -29,7 +29,7 @@ $(document).ready(function() {
 	$("#pong_continuity_btn").on('click', function () {
 		if(score2 < score_threshold && score1 < score_threshold) {
 			if(paused) {
-				$("#pong_game_text").text("");;
+				$("#pong_game_text").text("");
 				paused = false;
 				start_game();
 			}

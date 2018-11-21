@@ -175,7 +175,7 @@ function game() {
 	}
 	//If the player touches the zapper or dies from a collision
 	if(x_pos < death_x_coordinate || test_collision()) {
-		lives -= 1;						//Increment the death count
+		lives -= 1;
 		if(lives <= 0) {
 			game_over(game_over_msg);
 		} 

@@ -129,7 +129,7 @@ function update() {
 		context.fillRect(trail[i].x*grid_size, trail[i].y*grid_size, grid_size - 2, grid_size - 2);
 		if($("#snake_start_msg").is(":hidden") && trail[i].x == player_x_pos && trail[i].y == player_y_pos) {	//If the snake eats itself
 			if(repeat_mode) {
-				tail = 5;		//reset tail length to 5
+				tail = 5;		//reset tail length to 5 on repeat mode
 			} 
 			else {
 				lives -= 1;

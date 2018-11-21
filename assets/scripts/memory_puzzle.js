@@ -123,7 +123,7 @@ function show_seq(seq, duration) {
 function generate_seq(len = 3) {
 	let seq = [];
 	for(var i = 0; i < len; i++) {
-		seq.push(Math.floor(Math.random() * 4)); //returns a random int from 0 to 3 
+		seq.push(Math.floor(Math.random() * 4)); //returns a random int in the range [0, 3] 
 	}
 	return seq;
 }
